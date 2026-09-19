@@ -40,7 +40,7 @@
 
 }
 
-/* One shared gradient for entire website */
+/*  Full website gradient */
 
 :root {
   --brand-gradient: linear-gradient(
@@ -62,7 +62,7 @@
   color: transparent;
 }
 
-/* Common Layout */
+/* Common Use */
 
 .site-container {
   width: calc(100% - 32px);
@@ -70,7 +70,7 @@
   margin-inline: auto;
 }
 
-/* Global Styles */
+/* Eki Styles */
 
 @layer base {
 
