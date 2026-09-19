@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+@theme {
+
+  /* Fonts */
+ 
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Plus Jakarta Sans", sans-serif;
+
+  /* Main Colors */
+  --color-page: #ffffff;
+  --color-ink: #182132;
+  --color-ink-hover: #303d53;
+
+  --color-copy: #64748b;
+  --color-muted: #91a0b7;
+
+  --color-line: #e3eaf4;
+  --color-surface: #f5f8fc;
+
+  /* Brand Colors */
+  --color-brand-orange: #ff6b25;
+  --color-brand-pink: #e93683;
+  --color-brand-violet: #792ce8;
+
+  /* Functional Colors */
+  --color-star: #f5ad25;
+
+  --color-danger: #df3838;
+  --color-danger-line: #ffbaba;
+
+  --color-success-soft: #e9fff3;
+  --color-success-ink: #208250;
+
+}
+
+/* One shared gradient for entire website */
+
+:root {
+  --brand-gradient: linear-gradient(
+    105deg,
+    var(--color-brand-orange),
+    var(--color-brand-pink),
+    var(--color-brand-violet)
+  );
+}
+
+.brand-gradient {
+  background-image: var(--brand-gradient);
+}
+
+.text-brand-gradient {
+  background-image: var(--brand-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Common Layout */
+
+.site-container {
+  width: calc(100% - 32px);
+  max-width: 1040px;
+  margin-inline: auto;
+}
+
+/* Global Styles */
+
+@layer base {
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+  }
+
+  body {
+    min-width: 320px;
+    background: var(--color-page);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+
+}
