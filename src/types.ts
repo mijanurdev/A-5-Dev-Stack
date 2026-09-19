@@ -9,3 +9,8 @@ export interface Technology {
   difficulty: string
   badge: string
 }
+
+export interface TechResult {
+  technologies: Technology[]
+  error: string
+}
